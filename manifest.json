@@ -1,0 +1,13 @@
+{
+  "name": "FolketsMods",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/amatho",
+  "description": "A modpack for folket.",
+  "dependencies": [
+    "Renegades-FlashlightToggle-1.4.1",
+    "BepInEx-BepInExPack-5.4.2100",
+    "tinyhoot-ShipLoot-1.0.0",
+    "Renegades-WalkieUse-1.3.1",
+    "FlipMods-LetMeLookDown-1.0.1"
+  ]
+}
