@@ -1,6 +1,6 @@
 {
   "name": "FolketsMods",
-  "version_number": "1.0.0",
+  "version_number": "1.1.0",
   "website_url": "https://github.com/amatho",
   "description": "A modpack for folket.",
   "dependencies": [
@@ -13,6 +13,7 @@
     "Monkeytype-HideChat-1.0.0",
     "Drakorle-MoreItems-1.0.1",
     "AllToasters-QuickRestart-1.1.0",
-    "RickArg-Helmet_Cameras-2.1.5"
+    "RickArg-Helmet_Cameras-2.1.5",
+    "anormaltwig-LateCompany-1.0.6"
   ]
 }
