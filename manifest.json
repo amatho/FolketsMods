@@ -1,7 +1,7 @@
 {
   "name": "FolketsMods",
   "version_number": "1.1.1",
-  "website_url": "https://github.com/amatho",
+  "website_url": "https://github.com/amatho/FolketsMods",
   "description": "A modpack for folket.",
   "dependencies": [
     "Renegades-FlashlightToggle-1.4.1",

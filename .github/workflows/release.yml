@@ -32,6 +32,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: gh release create $VERSION --verify-tag --title $VERSION
     - name: Upload release archive
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         zip FolketsMods.zip manifest.json icon.png README.md
         gh release upload "$VERSION" FolketsMods.zip
