@@ -1,3 +1,3 @@
 # FolketsMods
 
-A modpack for *folket*.
+A Lethal Company modpack for *folket*.

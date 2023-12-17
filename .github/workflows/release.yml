@@ -1,0 +1,37 @@
+name: release
+
+on:
+  push:
+    tags:
+    - "[0-9]+.[0-9]+.[0-9]+"
+
+permissions:
+  contents: write
+
+jobs:
+  create-release:
+    name: create-release
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Get the release version from the tag
+      if: env.VERSION == ''
+      run: echo "VERSION=${{ github.ref_name }}" >> $GITHUB_ENV
+    - name: Show the version
+      run: |
+        echo "version is: $VERSION"
+    - name: Check that tag version and manifest.json version are the same
+      shell: bash
+      run: |
+        if ! grep -q "\"version_number\": \"$VERSION\"" manifest.json; then
+          echo "version does not match manifest.json" >&2
+          exit 1
+        fi
+    - name: Create GitHub release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: gh release create $VERSION --verify-tag --title $VERSION
+    - name: Upload release archive
+      run: |
+        zip FolketsMods.zip manifest.json icon.png README.md
+        gh release upload "$VERSION" FolketsMods.zip
